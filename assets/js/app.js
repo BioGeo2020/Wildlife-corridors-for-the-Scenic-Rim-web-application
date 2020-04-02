@@ -597,7 +597,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'> <a href='https://biogeo.com.au/'>BioGeo.com.au | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'></a>";
+  div.innerHTML = "<span class='hidden-xs'> <a href='https://biogeo.com.au/'>BioGeo.com.au </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'></a>";
   return div;
 };
 map.addControl(attributionControl);
