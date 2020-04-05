@@ -36,8 +36,9 @@
             <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
             <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
           </div>
-          <a class="navbar-brand" href="#"><img src="assets/img/2000dpi.png"  width="90"></a>
-          <a class="navbar-brand" href="#"><p> &nbsp&nbsp &nbspWildlife corridors for the Scenic Rim </p></a>
+          <a class="navbar-brand" ><img src="assets/img/2000dpi.png"  width="100"></a>
+          
+          <a class="navbar-brand" ><p> &nbsp&nbsp &nbspWildlife corridors for the Scenic Rim </p></a>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="search">
@@ -62,7 +63,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="data/scenic_rim.geojson" download="scenic_rim.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Scenic Rim (geoJSON)</a></li>
                   <li><a href="data/landuse2.geojson" download="landuse2.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Conservation areas (geoJSON</a></li>
-                  <li><a href="data/rural_properties2.geojson" download="rural_properties.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Properties (rural)</a></li>
+                  <li><a href="data/rural_properties2.geojson" download="rural_properties.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Rural properties (geoJSON)</a></li>
                   <li><a href="data/corridors.geojson" download="corridors.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Corridors (geoJSON)</a></li>
                   <li><a href="data/hubs.geojson" download="hubs.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Hubs (geoJSON)</a></li>
                   <li><a href="data/ruralprop2.geojson" download="ruralprop.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Centroids (geoJSON)</a></li>
@@ -159,27 +160,31 @@
                  
                 <p><font color="blue">You can check to see where your prpoerty lies in respect to the proposed corridors. Simply search by your property name in the search box in the top right corner of the map. If its not included, no problem, just get in touch via the Contact Us tab above and let us know your address - we'll work it out from there.</font></p>
         
+              
+            
                
                
-                <div class="panel panel-primary">
+               
+               
+               
+               
+                 <div class="panel panel-primary">
                   <div class="panel-heading">Application features</div>
                   <ul class="list-group">
                       <li class="list-group-item">This web mapping application was developed by <a href="https://www.biogeo.com.au/">BioGeo</a> in support of the <a href="https://wildlife.org.au/">Wildlife Preservation Society Queensland</a>. It's a full screen mobile-friendly application with responsive navbar and modal placeholders using <a href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, and <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>, and builds on the Bootleaf project.<p></p> <p>Features include client-side multi-layer search with autocomplete, and responsive sidebar synced to the map bounds that can be sorted or filtered. </p></li>
-
                   </ul>
                 </div>
               </div>
               <div id="disclaimer" class="tab-pane fade text-danger">
-                <p>The data provided on this site is for conservation purposes only and to assist Wildlife Preservation Society Queensland in managing this project. Absolutely no accuracy or completeness is guaranteed, implied or intended. All property information was obtained via open access sources via the <a href="http://qldspatial.information.qld.gov.au/catalogue/custom/index.page">Queensland Spatial Catalogue - QSpatial</a>. </p>
+                <p>The data provided on this site is for conservation purposes only and to assist Wildlife Preservation Society Queensland in managing this project.</p>
+                <p>Absolutely no accuracy or completeness is guaranteed, implied or intended. All property information was obtained via open access sources via the <a href="http://qldspatial.information.qld.gov.au/catalogue/custom/index.page">Queensland Spatial Catalogue - QSpatial</a>. </p>
               </div>
               <div class="tab-pane fade" id="contact">
-                <form id="contact-form" action="mailto:andrew.mackey@biogeo.com.au.com" method="post" enctype="text/plain">
-                 
+                <form id="contact-form">
                   <div class="well well-sm">
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">
-                         
                           <label for="first-name">First Name:</label>
                           <input type="text" class="form-control" id="first-name">
                         </div>
@@ -204,7 +209,7 @@
                     </div>
                   </div>
                 </form>
-              
+              </div>
               <div class="tab-pane fade" id="properties-tab">
                 <p>Properties data courtesy of the <a href="http://qldspatial.information.qld.gov.au/catalogue/custom/index.page">Queensland Spatial Catalogue - QSpatial</a>. The polygons represent privately owned rural properties or land parcels that can be searched for by property name.  </p>
               </div>
