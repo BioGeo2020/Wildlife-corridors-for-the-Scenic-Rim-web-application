@@ -86,7 +86,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .navbar .navbar-brand {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   color: #DCDCDC;
 }
 .navbar-collapse.in {

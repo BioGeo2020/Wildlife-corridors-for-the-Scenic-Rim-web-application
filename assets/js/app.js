@@ -671,6 +671,7 @@ var groupedOverlays = {
 
 var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
   collapsed: isCollapsed
+    
 }).addTo(map);
 
 /* Highlight search box text on click */
