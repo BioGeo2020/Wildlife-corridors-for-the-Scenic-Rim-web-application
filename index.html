@@ -25,8 +25,8 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon-120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon-152.png">
-    <link rel="icon" sizes="196x196" href="assets/img/favicon-196.png">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" sizes="196x196" href="assets/img/glider.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/glider.png">
     
         <style>
     .serif {
@@ -34,17 +34,28 @@
     }
     </style>
     
+       
+    <style>
+body {
+  background-color: #3333CC;
+}
+</style>
+   
+  <style>
+      .leaflet-control-layers-expanded { background: #000000; color:white;}
+  </style>  
+    
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#000000">
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="navbar-icon-container">
             <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
             <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
           </div>
-          <a class="navbar-brand" ><img src="assets/img/2000dpi.png"  width="95"></a>
+          <a class="navbar-brand" ><img src="assets/img/2000dpi.png"  width="90"></a>
           
 
         </div>
@@ -64,7 +75,7 @@
                 <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="legend-btn"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Show Legend</a></li>
                 <li class="divider hidden-xs"></li>
                 <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="login-btn"><i class="fa fa-user"></i>&nbsp;&nbsp;Login</a></li>
-                 <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fas fa-globe-asia white"></i>&nbsp;&nbsp;About the project</a></li>
+
               </ul>
             </li>
             <li class="dropdown">
@@ -81,7 +92,7 @@
                 </ul>
             </li>
             <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fas fa-th-list white"></i>&nbsp;&nbsp;POI List</a></li>
-            <a class="navbar-brand" ><p class="serif">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWildlife corridors for the Scenic Rim </p></a>
+            <a class="navbar-brand" ><p class="serif">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWildlife corridors for the Scenic Rim </p></a>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -101,7 +112,7 @@
                   <input type="text" class="form-control search" placeholder="Filter" />
                 </div>
                 <div class="col-xs-4 col-md-4">
-                  <button type="button" class="btn btn-primary pull-right sort" data-sort="feature-name" id="sort-btn"><i class="fa fa-sort"></i>&nbsp;&nbsp;Sort</button>
+                  <button type="button" class="btn btn-primary pull-right sort" style="background-color:#3333CC" data-sort="feature-name" id="sort-btn"><i class="fa fa-sort"></i>&nbsp;&nbsp;Sort</button>
                 </div>
               </div>
             </div>
@@ -118,7 +129,7 @@
                     <th>Chevron</th>
                   <tr>
                 </thead>
-                <tbody class="list"></tbody>
+                <tbody class="list" style="background-color:white"></tbody>
               </table>
             </div>
           </div>

@@ -4,7 +4,7 @@ html, body, #container {
   overflow: hidden;
 }
 body {
-  padding-top: 52px;
+  padding-top: 54px;
 }
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -47,7 +47,7 @@ input[type="radio"], input[type="checkbox"] {
   width: 100%;
 }
 .white {
-  color: #4169E1;
+  color: #FFFFFF;
 }
 .panel-heading{
    width: 250px;
@@ -86,8 +86,8 @@ input[type="radio"], input[type="checkbox"] {
 }
 .navbar .navbar-brand {
   font-weight: bold;
-  font-size: 33px;
-  color: 	#DCDCDC;
+  font-size: 32px;
+  color: #FFFFFF;
 }
 .navbar-collapse.in {
   overflow-y: hidden;
@@ -103,13 +103,14 @@ input[type="radio"], input[type="checkbox"] {
   margin-left: 25px;
 }
 .typeahead {
-  background-color: #00BFFF;
+  background-color: #FFFFFF;
 }
 .tt-dropdown-menu {
-  background-color: #00BFFF;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #3333CC;
+  color:#FFFFFF;
+  border: 1px solid rgba(255,255,255,1);
   border-radius: 4px 4px 4px 4px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 10px rgba(255,255,255,1);
   margin-top: 4px;
   padding: 4px 0;
   width: 100%;

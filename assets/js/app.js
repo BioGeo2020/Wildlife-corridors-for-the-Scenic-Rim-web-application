@@ -695,7 +695,7 @@ $(document).one("ajaxStop", function () {
   $("#loading").hide();
   sizeLayerControl();
   /* Fit map to boroughs/properties bounds */
-  map.fitBounds(scenicrim.getBounds());
+  map.fitBounds(hubs.getBounds());
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
