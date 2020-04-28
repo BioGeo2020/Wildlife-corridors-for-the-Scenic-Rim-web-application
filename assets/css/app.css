@@ -4,7 +4,7 @@ html, body, #container {
   overflow: hidden;
 }
 body {
-  padding-top: 54px;
+  padding-top: 53px;
 }
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -13,7 +13,7 @@ input[type="radio"], input[type="checkbox"] {
   display: block;
   width: 250px;
   height: 100%;
-  max-width: 100%;
+  max-width: 95%;
   float: left;
 }
 #map {
@@ -47,13 +47,14 @@ input[type="radio"], input[type="checkbox"] {
   width: 100%;
 }
 .white {
-  color: #FFFFFF;
+  color: #036bfc;
 }
 .panel-heading{
    width: 250px;
 }
 .panel-body{
   width: 250px;
+
 }
 .feature-row {
   cursor: pointer;
@@ -67,7 +68,7 @@ input[type="radio"], input[type="checkbox"] {
 .sidebar-table {
   position: absolute;
   width: 100%;
-  top: 103px;
+  top: 100px;
   bottom: 0px;
   overflow: auto;
 }
@@ -87,7 +88,8 @@ input[type="radio"], input[type="checkbox"] {
 .navbar .navbar-brand {
   font-weight: bold;
   font-size: 32px;
-  color: #FFFFFF;
+  color: #DCDCDC;
+  margin-top: -2px;
 }
 .navbar-collapse.in {
   overflow-y: hidden;
@@ -106,7 +108,7 @@ input[type="radio"], input[type="checkbox"] {
   background-color: #FFFFFF;
 }
 .tt-dropdown-menu {
-  background-color: #3333CC;
+  background-color: #036bfc;
   color:#FFFFFF;
   border: 1px solid rgba(255,255,255,1);
   border-radius: 4px 4px 4px 4px;
