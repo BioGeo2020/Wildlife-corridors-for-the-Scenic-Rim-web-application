@@ -21,6 +21,7 @@ input[type="radio"], input[type="checkbox"] {
   height: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.50);
 }
+
 #loading {
   position: absolute;
   width: 220px;
@@ -29,6 +30,32 @@ input[type="radio"], input[type="checkbox"] {
   left: 50%;
   margin: -10px 0 0 -110px;
   z-index: 20001;
+}
+ * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+ .serif {
+      font-family: 'Caveat Brush', cursive;
+    }
+    </style>
+    
+       
+    <style>
+body {
+  background-color: #036bfc;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 #features {
   margin: 0px;
@@ -51,6 +78,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .panel-heading{
    width: 250px;
+   background-color:#036bfc;
 }
 .panel-body{
   width: 250px;
@@ -87,8 +115,8 @@ input[type="radio"], input[type="checkbox"] {
 }
 .navbar .navbar-brand {
   font-weight: bold;
-  font-size: 32px;
-  color: #DCDCDC;
+  font-size: 34px;
+  color: 	#c0c0c0;
   margin-top: -2px;
 }
 .navbar-collapse.in {
@@ -178,3 +206,27 @@ input[type="radio"], input[type="checkbox"] {
     display: none !important;
   }
 }
+  
+.leaflet-control-coordinates {
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	cursor: pointer;
+	padding: 2px 5px;
+}
+
+.leaflet-control-coordinates.hidden {
+	display: none;
+}
+
+.leaflet-control-coordinates-lng {
+	padding-left: 5px;
+}
+
+            #logoContainer {
+            position: absolute;
+            z-index: 100;
+            top: 65px;
+            left: 262px;
+                
+        }

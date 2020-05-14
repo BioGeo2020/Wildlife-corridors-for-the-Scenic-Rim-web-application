@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon-152.png">
     <link rel="icon" sizes="196x196" href="assets/img/glider.png">
     <link rel="icon" type="image/x-icon" href="assets/img/glider.png">
-    
+        
         <style>
     .serif {
       font-family: 'Caveat Brush', cursive;
@@ -48,6 +48,9 @@ body {
   </head>
 
   <body>
+
+   
+   
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#000000">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -55,7 +58,7 @@ body {
             <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
             <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
           </div>
-          <a class="navbar-brand" ><img src="assets/img/2000dpi.png"  width="90"></a>
+          <a class="navbar-brand" href="https://www.biogeo.com.au/"><img src="assets/img/2000dpi.png"  width="90"></a> 
           
 
         </div>
@@ -81,7 +84,7 @@ body {
             <li class="dropdown">
                 <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fas fa-download white"></i>&nbsp;&nbsp;Download <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><p><i> &nbsp&nbsp&nbsp The below files can be downloaded &nbsp&nbsp&nbsp&nbspand imported into a GIS project.</i></p></li>
+                  <li><p><i> &nbsp&nbsp&nbsp The below files can be downloaded and imported into a GIS &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp  project.</i></p></li>
                   <li><a href="data/scenic_rim.geojson" download="scenic_rim.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Scenic Rim (geoJSON)</a></li>
                   <li><a href="data/landuse2.geojson" download="landuse2.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Conservation areas (geoJSON</a></li>
                   <li><a href="data/rural_properties2.geojson" download="rural_properties.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Rural properties (geoJSON)</a></li>
@@ -90,6 +93,10 @@ body {
                   <li><a href="data/ruralprop2.geojson" download="ruralprop.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Centroids (geoJSON)</a></li>
                   <li><a href="data/koala.geojson" download="koala.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Koalas'(geoJSON)</a></li>
                   <li><a href="data/koala.geojson" download="koala.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Gliders' (geoJSON)</a></li>
+                  <li><p><i></i></p></li>
+                  <li><p><i> &nbsp&nbsp&nbsp Other documents of interest.</i></p></li>
+                  <li><a href="assets/img/Concept_map.png" download="Concept_map.png" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Concept map (PNG image)</a></li>
+                  <li><a href="Draft_Biodiversity_Strategy_Scenic_Rim_Regional_Council.pdf" download="Draft_Biodiversity_Strategy_Scenic_Rim_Regional_Council.pdf" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Biodiversity Strategy - Scenic Rim Regional Coucil (PDF)</a></li>
                 </ul>
             </li>
             <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fas fa-th-list white"></i>&nbsp;&nbsp;POI List</a></li>
@@ -146,6 +153,10 @@ body {
         </div>
       </div>
     </div>
+    
+               <div id="logoContainer">
+        <img src="assets/img/WPSQ_logo_white.png" width="255">
+        </div>
 
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
@@ -163,7 +174,7 @@ body {
             <ul class="nav nav-tabs nav-justified" id="aboutTabs" >
               <li class="active"><a style="color:#036bfc" href="#about" data-toggle="tab"><i class="fa fa-question-circle" style="color:#036bfc"></i>&nbsp;About the project</a></li>
 
-              <li><a style="color:#036bfc" href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle" style="color:#036bfc"></i>&nbsp;About BioGeo</a></li>
+              <li><a style="color:#036bfc" href="#disclaimer" data-toggle="tab"><i class="fa fa-question-circle" style="color:#036bfc"></i>&nbsp;About BioGeo</a></li>
               <li class="dropdown">
                 <a style="color:#036bfc" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe" style="color:#036bfc"></i>&nbsp;Metadata <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -177,7 +188,7 @@ body {
             </ul>
             <div class="tab-content" id="aboutTabsContent">
               <div class="tab-pane fade active in" id="about">
-                 <p><b>Do you own land in or near the proposed corridors in the map and would you be willing to have some trees and shrubs planted or glider poles erected (at no expense to you)? If so, we'd love to hear from you.</b></p> 
+                 <h4><b>Connecting Scenic Rim habitats through wildlife corridors, working with local landholders to help native wildlife survive and thrive.</b></h4> 
                 <p>Most of the Scenic Rim's national parks and other protected areas harbour high-altitude dense forest. Squirrel gliders and other wildlife prefer low-altitude, drier open forests which are not so well protected. Movement between remaining forest fragments is becoming increasingly difficult. We'd like to change that!</p> 
                  
                 <p>You can check to see where your prpoerty lies in respect to the proposed corridors. Simply search by your property name in the search box in the top right corner of the map. If its not included, no problem, just get in touch and let us know your address - we'll work it out from there.</p>     
@@ -187,35 +198,62 @@ body {
                   <ul class="list-group">
                       <li class="list-group-item"><b>Wildlife Preservation Society of Qld Scenic Rim Branch</b>
                           <p></p>
+                          <p><a href="https://scenicrimwildlifecorridor.wordpress.com/106-2/"><h4>Register interest as a volunteer or landholder</h4></a></p>
+                          <p></p>
                           <p>Website: <a href="https://scenicrim.wildlife.org.au/"><b>scenicrim.wildlife.org.au/</b></a></p>
+                          <p>Website: <a href="https://scenicrimwildlifecorridor.wordpress.com/"><b>scenicrimwildlifecorridor.wordpress.com/</b></a></p>
+                          
                           <p>Email:  <a href="mailto:scenicrim@wildlife.org.au"><b>scenicrim@wildlife.org.au</b></a></p>
                            <p>Facebook: @Scenic.Rim.Wildlife</p>
-                           <p>Phone: 07 5544 1283</p>
+                           <p>Phone: <b>07 5544 1283</b></p>
                                   
                   </ul>
+                  
                 </div>      
-              
+                  
+                   
+                   <div class="row">
+  <div class="column">
+    <img src="https://scenicrimwildlifecorridor.files.wordpress.com/2019/12/installing-nestbox.jpg?w=1024" height="200">
+  </div>
+  <div class="column">
+    <img src="https://scenicrimwildlifecorridor.files.wordpress.com/2019/12/treeplanting.jpg?w=1024" height="200">
+  </div>
+  <div class="column">
+    <img src="https://scenicrimwildlifecorridor.files.wordpress.com/2020/01/spot_lighting_family.jpg?w=1024" height="200">
+  </div>
+</div>
+                   
+                   
+                   
+                   
+                   
               </div>
               <div  id="disclaimer" class="tab-pane fade text-danger">
                  <p style="color:#2F4F4F">
                 
-                         BioGeo is an Australian ecological research and services consultancy and a social enterprise for biodiversity conservation. We specialise in the application of GIS, remote sensing, and spatial and statistical analysis, primarily for biodiversity conservation and the assessment of environmental impact and risk, but also offer a whole range of GIS and mapping services to customers across all industries and sectors.</p> 
+                     <b><a href="https://www.biogeo.com.au/">BioGeo</a> </b> is an Australian ecological research and services consultancy and a social enterprise for biodiversity conservation. We specialise in the application of GIS, remote sensing, and spatial and statistical analysis, primarily for biodiversity conservation and the assessment of environmental impact and risk, but also offer a whole range of GIS and mapping services to customers across all industries and sectors.</p> 
                 <p style="color:#2F4F4F">
                       What’s more, with your help 15% of our fees go directly into supporting wildlife conservation charities and projects across Queensland, Australia, and the world. Where the money goes is up to you!</p>
-                <p style="color:#2F4F4F">
-                    Additionally, we provide a Postgraduate Support Service for environmental research candidates with GIS, spatial and statistical analysis, and graphical presentation. And when possible, we incorporate open source software in order to supply the necessary information for the candidate to replicate the products of our support and learn the process themselves. While we normally charge for this service, we may support projects that meet our core aims absolutely free. </p>
-                   <p style="color:white"></p>...      
+           
                   
-                  <div class="panel panel-primary">
-                  <div class="panel-heading" style="background-color:#036bfc"><b>Application features</b></div>
+                  <div class="panel-heading" style="color:white" ><b>How BioGeo got involved...</b></div>
+                  <p></p>
+                           <p style="color:#2F4F4F"><b><a href="https://www.biogeo.com.au/">BioGeo</a> </b> was initially contacted by the <a href="https://wildlife.org.au/">Wildlife Preservation Society Queensland</a> to generate a display map to visualise the project conceptually. However, we thought we could go a step further by generating a web mapping application that was accessible to everyone (e.g. hosted online) and where all the information could be stored and updated, visualised and downloaded. What’s more, we also wanted it to serve as a tool to help identify those rural properties (and landowners) within or close to the proposed corridors.<p></p>
+
+
+                  <div class="panel-heading" style="color:white" ><b>Application features</b></div>
            
                       <p></p>
-                <p style="color:#2F4F4F">This web mapping application was developed by <a href="https://www.biogeo.com.au/">BioGeo</a> in support of the <a href="https://wildlife.org.au/">Wildlife Preservation Society Queensland</a>. It's a full screen mobile-friendly application with responsive navbar and modal placeholders using <a href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, and <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>, and builds on the excellent Bootleaf code. <p style="color:#2F4F4F">Features include client-side multi-layer search with autocomplete, and responsive sidebar synced to the map bounds that can be sorted or filtered. </p>
+                  
+                  <p style="color:#2F4F4F"> The program we developed is a full-screen mobile-friendly application with responsive navbar and modal placeholders using <a href="http://getbootstrap.com/">Bootstrap 3</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, and <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a>, and builds on the excellent Bootleaf code. Features include client-side multi-layer search with autocomplete and a responsive sidebar synced to the map bounds that can be sorted or filtered.</p>  
+                  
+                  <p style="color:#2F4F4F"> There are multiple layers including the Scenic Rim boundary; proposed corridor routes; property names and their boundary areas; and recorded sightings of target species (such as gliders or koalas) – all of which can be searched for in the program. There are also a range of base maps including satellite imagery, hill shaded topographic maps (to highlight slopes and gradients), and several others. The program will be updated with additional layers added as new information becomes available -   the idea being that the app will evolve with the project.</p>  
+                  
+                    
+                <p style="color:#2F4F4F"><b>If you think that BioGeo could help with your project, contact us at <a href="mailto:info@biogeo.com.au"><b>info@biogeo.com.au</b></a></b></p>.
                       
-
-               <p style="color:#2F4F4F">The program includes multiple layers including the Scenic Rim boundary; proposed corridor routes; property names and their boundary areas; and recorded sightings of target species (such as gliders or koalas) – all of which can be searched for in the program. There are also a range of base maps including satellite imagery, hill shaded topographic maps (to highlight slopes and gradients), and several others. The program will be updated with additional layers added as new information becomes available -   the idea being that the app will evolve with the project.</p>
-                      
-    
+         
                 </div>
                   
               </div>
