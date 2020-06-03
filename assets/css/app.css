@@ -6,6 +6,10 @@ html, body, #container {
 body {
   padding-top: 53px;
 }
+body {
+  background-color: #036bfc;
+}
+.leaflet-control-layers-expanded { background: #000000; color:white;}
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
 }
@@ -30,32 +34,6 @@ input[type="radio"], input[type="checkbox"] {
   left: 50%;
   margin: -10px 0 0 -110px;
   z-index: 20001;
-}
- * {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
- .serif {
-      font-family: 'Caveat Brush', cursive;
-    }
-    </style>
-    
-       
-    <style>
-body {
-  background-color: #036bfc;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 #features {
   margin: 0px;
@@ -116,9 +94,12 @@ body {
 .navbar .navbar-brand {
   font-weight: bold;
   font-size: 34px;
-  color: 	#c0c0c0;
+  color: darkgray;
   margin-top: -2px;
 }
+    .serif {
+      font-family: 'Caveat Brush', cursive;
+    }
 .navbar-collapse.in {
   overflow-y: hidden;
 }
@@ -223,10 +204,11 @@ body {
 	padding-left: 5px;
 }
 
-            #logoContainer {
-            position: absolute;
-            z-index: 100;
-            top: 65px;
-            left: 262px;
+ #logoContainer {
+position: absolute;
+
+z-index: 100;
+top: 60px;
+left: 260px;
                 
         }

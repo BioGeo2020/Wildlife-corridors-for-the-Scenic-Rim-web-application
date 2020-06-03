@@ -118,14 +118,9 @@ function syncSidebar() {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/rural.png"></td><td class="feature-Name">' + layer.feature.properties.BoroName + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
-  });
+  });  
     
-    
-    
-    
-    
-    
-  /* Loop through species layer and add only features which are in the map bounds */
+  /* Loop through museums/species layer and add only features which are in the map bounds */
   species.eachLayer(function (layer) {
     if (map.hasLayer(speciesLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
@@ -137,18 +132,10 @@ function syncSidebar() {
     gliders.eachLayer(function (layer) {
     if (map.hasLayer(glidersLayer)) {
       if (map.getBounds().contains(layer.getLatLng())) {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/glider.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/parrot.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   }); 
-
-
-    
-    
-    
-    
-    
-    
 
   /* Update list.js featureList */
   featureList = new List("features", {
@@ -225,9 +212,11 @@ var conservation = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "black",
-        weight: 0.5,
-      fill: false,
-      clickable: false
+      border: "black",
+      weight: 0.5,
+      fill: true,
+      opacity: 0.5,
+      clickable: true
     };
   },
   onEachFeature: function (feature, layer) {
@@ -239,7 +228,7 @@ var conservation = L.geoJson(null, {
     });
   }
 });
-$.getJSON("data/landuse2.geojson", function (data) {
+$.getJSON("data/rural_properties2.geojson", function (data) {
   conservation.addData(data);
 });
 
@@ -267,7 +256,7 @@ $.getJSON("data/rural_properties2.geojson", function (data) {
   properties.addData(data);
 });
 
-//Create a color dictionary based off of corridors 
+//Create a color dictionary based off of subway/corridors route_id
 var corridorColors = {"1":"#fd9a00", "2":"#ff3135", "3":"#ff3135", "4":"#fd9a00",
     "5":"#ff3135", "6":"#ff3135", "7":"#fd9a00", "8":"#fd9a00", "9":"#fd9a00",
     "10":"#fd9a00"};
@@ -426,7 +415,7 @@ $.getJSON("data/ruralprop2.geojson", function (data) {
 
 
 
-/* Empty layer placeholder to add to layer control for listening when to add/remove species/kaola to markerClusters layer */
+/* Empty layer placeholder to add to layer control for listening when to add/remove museums/species to markerClusters layer */
 var speciesLayer = L.geoJson(null);
 var species = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
@@ -461,7 +450,7 @@ var species = L.geoJson(null, {
       speciesSearch.push({
         name: layer.feature.properties.NAME,
         Date: layer.feature.properties.Date,
-        source: "Koalas'",
+        source: "Mammals'",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
@@ -563,12 +552,19 @@ L.Control.Coordinates = L.Control.extend({
 	}
 });
 
+
+
+
+
+
+
+
 var glidersLayer = L.geoJson(null);
 var gliders = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/glider.png",
+        iconUrl: "assets/img/parrot.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -593,11 +589,11 @@ var gliders = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/glider.png"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="16" height="18" src="assets/img/icons8-parrot-100"></td><td class="feature-name">' + layer.feature.properties.NAME + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       glidersSearch.push({
         name: layer.feature.properties.NAME,
         Date: layer.feature.properties.Date,
-        source: "Gliders",
+        source: "Birds",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
@@ -746,15 +742,16 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
+    "<img src='assets/img/koala.png' width='24' height='28'>&nbsp;Mammals": speciesLayer,
+    "<img src='assets/img/parrot.png' width='24' height='28'>&nbsp;Birds": glidersLayer,
     "<img src='assets/img/leaf.png' width='24' height='28'>&nbsp;Hubs": hubsLayer,
-    "<img src='assets/img/rural.png' width='24' height='28'>&nbsp;Centroids": centroidsLayer,
-    "<img src='assets/img/koala.png' width='24' height='28'>&nbsp;Koalas'": speciesLayer,
-    "<img src='assets/img/glider.png' width='24' height='28'>&nbsp;Gliders": glidersLayer
+    "<img src='assets/img/rural.png' width='24' height='28'>&nbsp;Centroids": centroidsLayer
+
   },
   "Layers": {
     "Scenic Rim": scenicrim,
-    "Conservation areas": conservation,
-    "Properties": properties,
+    "Properties (grey)": conservation,
+    "Properties (white)": properties,
     "Corridors": corridorLines
   }
 };
@@ -825,7 +822,7 @@ $(document).one("ajaxStop", function () {
   });
 
   var speciesBH = new Bloodhound({
-    name: "Koalas'",
+    name: "Mammals",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -835,7 +832,7 @@ $(document).one("ajaxStop", function () {
   });
     
   var glidersBH = new Bloodhound({
-    name: "Gliders",
+    name: "Birds",
     datumTokenizer: function (d) {
       return Bloodhound.tokenizers.whitespace(d.name);
     },
@@ -913,7 +910,7 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{type}}</small>"].join(""))
     }
   }, {
-    name: "Koalas",
+    name: "Mammals",
     displayKey: "name",
     source: speciesBH.ttAdapter(),
     templates: {
@@ -921,11 +918,11 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{Date}}</small>"].join(""))
     }
   }, {
-    name: "Gliders",
+    name: "Birds",
     displayKey: "name",
     source: glidersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/glider.png' width='24' height='28'>&nbsp;Gliders</h4>",
+      header: "<h4 class='typeahead-header'><img src='assets/img/parrot.png' width='24' height='28'>&nbsp;Birds</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{Date}}</small>"].join(""))
     }        
   }, {      
@@ -966,7 +963,7 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-    if (datum.source === "Gliders") {
+    if (datum.source === "Birds") {
      if (!map.hasLayer(glidersLayer)) {
         map.addLayer(glidersLayer);
       }
@@ -992,6 +989,8 @@ $(document).one("ajaxStop", function () {
   $(".twitter-typeahead").css("position", "static");
   $(".twitter-typeahead").css("display", "block");
 });
+
+
 
 // Leaflet patch to make layer control scrollable on touch browsers
 var container = $(".leaflet-control-layers")[0];
